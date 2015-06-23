@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a401e9d925f5336f36b35244d7bb9a6",
+    "hash": "68832d982a62d7906a4afce44182a6da",
     "packages": [
         {
             "name": "bower-asset/fontawesome",
@@ -312,12 +312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-media.git",
-                "reference": "344b22af7797038549b2fea39e532723b7cb565a"
+                "reference": "ba9e0a3b60542f066470377a1d1f2897d5a1d9d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-media/zipball/344b22af7797038549b2fea39e532723b7cb565a",
-                "reference": "344b22af7797038549b2fea39e532723b7cb565a",
+                "url": "https://api.github.com/repos/cookyii/module-media/zipball/ba9e0a3b60542f066470377a1d1f2897d5a1d9d4",
+                "reference": "ba9e0a3b60542f066470377a1d1f2897d5a1d9d4",
                 "shasum": ""
             },
             "require": {
@@ -356,7 +356,7 @@
                 "video",
                 "yii2"
             ],
-            "time": "2015-06-23 11:38:33"
+            "time": "2015-06-23 11:53:35"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -592,12 +592,12 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "cookyii/base": 20,
         "cookyii/module-media": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.4.0"
