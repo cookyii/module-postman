@@ -1,5 +1,5 @@
-Email messages management module
-================================
+Emails management module
+========================
 
 Installation
 ------------
