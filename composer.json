@@ -1,0 +1,42 @@
+{
+  "name": "cookyii/module-postman",
+  "description": "Emails management module for Cookyii CMF",
+  "keywords": [
+    "yii2",
+    "cookyii",
+    "cmf",
+    "module",
+    "email",
+    "letters",
+    "queue"
+  ],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Revin Roman",
+      "email": "roman@rmrevin.ru",
+      "homepage": "https://rmrevin.ru/",
+      "role": "Founder and project lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/cookyii/module-postman/issues?state=open",
+    "source": "https://github.com/cookyii/module-postman"
+  },
+  "require": {
+    "php": ">=5.5.0",
+
+    "cookyii/base": "dev-master",
+    "cookyii/module-media": "dev-master",
+    "cookyii/module-account": "dev-master",
+
+    "rmrevin/yii2-fontawesome": "~2.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "cookyii\\modules\\Postman\\": "",
+      "resources\\": "./resources"
+    }
+  }
+}
