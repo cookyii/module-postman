@@ -266,16 +266,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/base.git",
-                "reference": "323e9acf3b7821068a3c8449b2d39e9efc7250eb"
+                "reference": "e21fa0e97362244a7d2c87fc31d23cb69e02ca87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/base/zipball/323e9acf3b7821068a3c8449b2d39e9efc7250eb",
-                "reference": "323e9acf3b7821068a3c8449b2d39e9efc7250eb",
+                "url": "https://api.github.com/repos/cookyii/base/zipball/e21fa0e97362244a7d2c87fc31d23cb69e02ca87",
+                "reference": "e21fa0e97362244a7d2c87fc31d23cb69e02ca87",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "2.0.*"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -303,7 +304,7 @@
                 "cookyii",
                 "yii2"
             ],
-            "time": "2015-06-19 16:50:58"
+            "time": "2015-06-23 11:23:41"
         },
         {
             "name": "cookyii/module-account",
@@ -311,12 +312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-account.git",
-                "reference": "25057f8f2fac10d09dcc16a1751090cc2207504a"
+                "reference": "a6dac85cb08660f1557130bd06cb82e951318f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-account/zipball/25057f8f2fac10d09dcc16a1751090cc2207504a",
-                "reference": "25057f8f2fac10d09dcc16a1751090cc2207504a",
+                "url": "https://api.github.com/repos/cookyii/module-account/zipball/a6dac85cb08660f1557130bd06cb82e951318f62",
+                "reference": "a6dac85cb08660f1557130bd06cb82e951318f62",
                 "shasum": ""
             },
             "require": {
@@ -351,7 +352,7 @@
                 "user",
                 "yii2"
             ],
-            "time": "2015-06-18 22:34:45"
+            "time": "2015-06-23 10:58:00"
         },
         {
             "name": "cookyii/module-media",
