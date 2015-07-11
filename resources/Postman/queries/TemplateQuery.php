@@ -14,9 +14,11 @@ namespace resources\Postman\queries;
 class TemplateQuery extends \yii\db\ActiveQuery
 {
 
+    use \components\db\traits\query\DeletedQueryTrait;
+
     /**
      * @param integer|array $id
-     * @return self
+     * @return static
      */
     public function byId($id)
     {
@@ -27,7 +29,7 @@ class TemplateQuery extends \yii\db\ActiveQuery
 
     /**
      * @param string|array $code
-     * @return self
+     * @return static
      */
     public function byCode($code)
     {
@@ -37,11 +39,23 @@ class TemplateQuery extends \yii\db\ActiveQuery
     }
 
     /**
-     * @return self
+     * @param string $query
+     * @return static
      */
-    public function withoutDeleted()
+    public function search($query)
     {
-        $this->andWhere(['deleted' => \resources\Postman\Template::NOT_DELETED]);
+        $words = explode(' ', $query);
+
+        $this->andWhere([
+            'or',
+            array_merge(['or'], array_map(function ($value) { return ['like', 'id', $value]; }, $words)),
+            array_merge(['or'], array_map(function ($value) { return ['like', 'code', $value]; }, $words)),
+            array_merge(['or'], array_map(function ($value) { return ['like', 'subject', $value]; }, $words)),
+            array_merge(['or'], array_map(function ($value) { return ['like', 'content_text', $value]; }, $words)),
+            array_merge(['or'], array_map(function ($value) { return ['like', 'content_html', $value]; }, $words)),
+            array_merge(['or'], array_map(function ($value) { return ['like', 'address', $value]; }, $words)),
+            array_merge(['or'], array_map(function ($value) { return ['like', 'description', $value]; }, $words)),
+        ]);
 
         return $this;
     }
