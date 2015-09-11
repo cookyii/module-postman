@@ -2,7 +2,7 @@
 /**
  * TemplateController.php
  * @author Revin Roman
- * @link https://rmrevin.ru
+ * @link https://rmrevin.com
  */
 
 namespace cookyii\modules\Postman\backend\controllers;
@@ -45,7 +45,7 @@ class TemplateController extends Postman\backend\components\Controller
     public function actionEdit()
     {
         $TemplateEditForm = new Postman\backend\forms\TemplateEditForm([
-            'Template' => new \resources\Postman\Template(),
+            'Template' => new \cookyii\modules\Postman\resources\Postman\Template(),
         ]);
 
         return $this->render('edit', [
@@ -70,12 +70,12 @@ class TemplateController extends Postman\backend\components\Controller
         switch ($type) {
             default:
             case 'text':
-                $Message = \resources\Postman\Message::compose($subject, $content, null, [], $styles, $use_layout);
+                $Message = \cookyii\modules\Postman\resources\Postman\Message::compose($subject, $content, null, [], $styles, $use_layout);
 
                 $result = Html::tag('pre', Html::encode($Message->content_text));
                 break;
             case 'html':
-                $Message = \resources\Postman\Message::compose($subject, null, $content, [], $styles, $use_layout);
+                $Message = \cookyii\modules\Postman\resources\Postman\Message::compose($subject, null, $content, [], $styles, $use_layout);
 
                 $result = $Message->content_html;
                 break;

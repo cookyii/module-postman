@@ -2,7 +2,7 @@
 /**
  * MessageController.php
  * @author Revin Roman
- * @link https://rmrevin.ru
+ * @link https://rmrevin.com
  */
 
 namespace cookyii\modules\Postman\backend\controllers\rest;
@@ -17,7 +17,7 @@ use yii\helpers\Json;
 class MessageController extends \yii\rest\ActiveController
 {
 
-    public $modelClass = 'resources\Postman\Message';
+    public $modelClass = 'cookyii\modules\Postman\resources\Postman\Message';
 
     /**
      * @inheritdoc
@@ -94,7 +94,7 @@ class MessageController extends \yii\rest\ActiveController
         /* @var $modelClass \yii\db\BaseActiveRecord */
         $modelClass = $action->modelClass;
 
-        /** @var \resources\queries\AccountQuery $Query */
+        /** @var \cookyii\modules\Account\resources\queries\AccountQuery $Query */
         $Query = $modelClass::find();
 
         $search = str_clean(Request()->get('search'));

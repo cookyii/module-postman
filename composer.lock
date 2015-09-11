@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "68832d982a62d7906a4afce44182a6da",
+    "hash": "1b33785235e170bbe9daaf517700a406",
     "packages": [
         {
             "name": "bower-asset/fontawesome",
@@ -266,15 +266,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/base.git",
-                "reference": "030b04d90968f5d2e8e92bcf9560832cce48cbcc"
+                "reference": "0de1bfbff96e04ececcda516c19a261f3c8769f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/base/zipball/030b04d90968f5d2e8e92bcf9560832cce48cbcc",
-                "reference": "030b04d90968f5d2e8e92bcf9560832cce48cbcc",
+                "url": "https://api.github.com/repos/cookyii/base/zipball/0de1bfbff96e04ececcda516c19a261f3c8769f2",
+                "reference": "0de1bfbff96e04ececcda516c19a261f3c8769f2",
                 "shasum": ""
             },
             "require": {
+                "cookyii/module-media": "dev-master",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "2.0.*"
             },
@@ -291,8 +292,8 @@
             "authors": [
                 {
                     "name": "Revin Roman",
-                    "email": "roman@rmrevin.ru",
-                    "homepage": "https://rmrevin.ru/",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/",
                     "role": "Founder and project lead"
                 }
             ],
@@ -304,7 +305,7 @@
                 "cookyii",
                 "yii2"
             ],
-            "time": "2015-09-07 17:56:42"
+            "time": "2015-09-11 20:16:02"
         },
         {
             "name": "cookyii/module-media",
@@ -312,12 +313,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-media.git",
-                "reference": "343aaee2c4d7faab9d9d246fce74069c8bad8df0"
+                "reference": "5a781275dcc8eab62de1e74bc4d461d9fc1eeb57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-media/zipball/343aaee2c4d7faab9d9d246fce74069c8bad8df0",
-                "reference": "343aaee2c4d7faab9d9d246fce74069c8bad8df0",
+                "url": "https://api.github.com/repos/cookyii/module-media/zipball/5a781275dcc8eab62de1e74bc4d461d9fc1eeb57",
+                "reference": "5a781275dcc8eab62de1e74bc4d461d9fc1eeb57",
                 "shasum": ""
             },
             "require": {
@@ -329,8 +330,7 @@
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "cookyii\\modules\\Media\\": "",
-                    "resources\\": "./resources"
+                    "cookyii\\modules\\Media\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -340,8 +340,8 @@
             "authors": [
                 {
                     "name": "Revin Roman",
-                    "email": "roman@rmrevin.ru",
-                    "homepage": "https://rmrevin.ru/",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/",
                     "role": "Founder and project lead"
                 }
             ],
@@ -358,7 +358,7 @@
                 "video",
                 "yii2"
             ],
-            "time": "2015-08-13 18:25:08"
+            "time": "2015-09-11 20:12:16"
         },
         {
             "name": "ezyang/htmlpurifier",

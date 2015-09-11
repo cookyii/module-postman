@@ -2,14 +2,14 @@
 /**
  * TemplateAttachQuery.php
  * @author Revin Roman
- * @link https://rmrevin.ru
+ * @link https://rmrevin.com
  */
 
-namespace resources\Postman\Template\queries;
+namespace cookyii\modules\Postman\resources\Postman\Template\queries;
 
 /**
  * Class TemplateAttachQuery
- * @package resources\Postman\Template\queries
+ * @package cookyii\modules\Postman\resources\Postman\Template\queries
  */
 class TemplateAttachQuery extends \yii\db\ActiveQuery
 {
