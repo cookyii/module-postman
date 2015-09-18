@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "1b33785235e170bbe9daaf517700a406",
+    "content-hash": "1428785a2c525be25b7165d78893b9ca",
     "packages": [
         {
             "name": "bower-asset/fontawesome",
@@ -266,12 +267,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/base.git",
-                "reference": "0de1bfbff96e04ececcda516c19a261f3c8769f2"
+                "reference": "db867cb0aec0a083319c0ae3895588712520f378"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/base/zipball/0de1bfbff96e04ececcda516c19a261f3c8769f2",
-                "reference": "0de1bfbff96e04ececcda516c19a261f3c8769f2",
+                "url": "https://api.github.com/repos/cookyii/base/zipball/db867cb0aec0a083319c0ae3895588712520f378",
+                "reference": "db867cb0aec0a083319c0ae3895588712520f378",
                 "shasum": ""
             },
             "require": {
@@ -305,7 +306,7 @@
                 "cookyii",
                 "yii2"
             ],
-            "time": "2015-09-11 20:16:02"
+            "time": "2015-09-18 18:30:35"
         },
         {
             "name": "cookyii/module-media",
@@ -313,12 +314,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-media.git",
-                "reference": "5a781275dcc8eab62de1e74bc4d461d9fc1eeb57"
+                "reference": "adb3d8cd116bf34877449174eda7b60d31cc2223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-media/zipball/5a781275dcc8eab62de1e74bc4d461d9fc1eeb57",
-                "reference": "5a781275dcc8eab62de1e74bc4d461d9fc1eeb57",
+                "url": "https://api.github.com/repos/cookyii/module-media/zipball/adb3d8cd116bf34877449174eda7b60d31cc2223",
+                "reference": "adb3d8cd116bf34877449174eda7b60d31cc2223",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +359,7 @@
                 "video",
                 "yii2"
             ],
-            "time": "2015-09-11 20:12:16"
+            "time": "2015-09-18 18:35:10"
         },
         {
             "name": "ezyang/htmlpurifier",
