@@ -267,12 +267,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/base.git",
-                "reference": "db867cb0aec0a083319c0ae3895588712520f378"
+                "reference": "cd28c9ea5cd279aaa7bf7b867f37a257cc786920"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/base/zipball/db867cb0aec0a083319c0ae3895588712520f378",
-                "reference": "db867cb0aec0a083319c0ae3895588712520f378",
+                "url": "https://api.github.com/repos/cookyii/base/zipball/cd28c9ea5cd279aaa7bf7b867f37a257cc786920",
+                "reference": "cd28c9ea5cd279aaa7bf7b867f37a257cc786920",
                 "shasum": ""
             },
             "require": {
@@ -306,7 +306,7 @@
                 "cookyii",
                 "yii2"
             ],
-            "time": "2015-09-18 18:30:35"
+            "time": "2015-09-24 17:17:54"
         },
         {
             "name": "cookyii/module-media",
@@ -314,12 +314,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-media.git",
-                "reference": "adb3d8cd116bf34877449174eda7b60d31cc2223"
+                "reference": "6a2bf8e64ef16bedfd4fb3c59dc5b1d7bf2dccbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-media/zipball/adb3d8cd116bf34877449174eda7b60d31cc2223",
-                "reference": "adb3d8cd116bf34877449174eda7b60d31cc2223",
+                "url": "https://api.github.com/repos/cookyii/module-media/zipball/6a2bf8e64ef16bedfd4fb3c59dc5b1d7bf2dccbf",
+                "reference": "6a2bf8e64ef16bedfd4fb3c59dc5b1d7bf2dccbf",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                 "video",
                 "yii2"
             ],
-            "time": "2015-09-18 18:35:10"
+            "time": "2015-09-24 17:25:23"
         },
         {
             "name": "ezyang/htmlpurifier",
