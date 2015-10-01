@@ -44,8 +44,12 @@ class TemplateController extends Postman\backend\components\Controller
      */
     public function actionEdit()
     {
-        $TemplateEditForm = new Postman\backend\forms\TemplateEditForm([
-            'Template' => new \cookyii\modules\Postman\resources\Postman\Template(),
+        /** @var \cookyii\modules\Postman\resources\Postman\Template $TemplateModel */
+        $TemplateModel = \Yii::createObject(\cookyii\modules\Postman\resources\Postman\Template::className());
+
+        $TemplateEditForm = \Yii::createObject([
+            'class' => Postman\backend\forms\TemplateEditForm::className(),
+            'Template' => $TemplateModel,
         ]);
 
         return $this->render('edit', [
@@ -67,15 +71,18 @@ class TemplateController extends Postman\backend\components\Controller
 
         $use_layout = $use_layout === 'true';
 
+        /** @var \cookyii\modules\Postman\resources\Postman\Message $MessageModel */
+        $MessageModel = \Yii::createObject(\cookyii\modules\Postman\resources\Postman\Message::className());
+
         switch ($type) {
             default:
             case 'text':
-                $Message = \cookyii\modules\Postman\resources\Postman\Message::compose($subject, $content, null, [], $styles, $use_layout);
+                $Message = $MessageModel::compose($subject, $content, null, [], $styles, $use_layout);
 
                 $result = Html::tag('pre', Html::encode($Message->content_text));
                 break;
             case 'html':
-                $Message = \cookyii\modules\Postman\resources\Postman\Message::compose($subject, null, $content, [], $styles, $use_layout);
+                $Message = $MessageModel::compose($subject, null, $content, [], $styles, $use_layout);
 
                 $result = $Message->content_html;
                 break;

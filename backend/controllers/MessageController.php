@@ -44,8 +44,12 @@ class MessageController extends Postman\backend\components\Controller
      */
     public function actionEdit()
     {
-        $MessageEditForm = new Postman\backend\forms\MessageEditForm([
-            'Message' => new \cookyii\modules\Postman\resources\Postman\Message(),
+        /** @var \cookyii\modules\Postman\resources\Postman\Message $MessageModel */
+        $MessageModel = \Yii::createObject(\cookyii\modules\Postman\resources\Postman\Message::className());
+
+        $MessageEditForm = \Yii::createObject([
+            'class' => Postman\backend\forms\MessageEditForm::className(),
+            'Message' => $MessageModel,
         ]);
 
         return $this->render('edit', [
@@ -66,15 +70,18 @@ class MessageController extends Postman\backend\components\Controller
 
         $use_layout = $use_layout === 'true';
 
+        /** @var \cookyii\modules\Postman\resources\Postman\Message $MessageModel */
+        $MessageModel = \Yii::createObject(\cookyii\modules\Postman\resources\Postman\Message::className());
+
         switch ($type) {
             default:
             case 'text':
-                $Message = \cookyii\modules\Postman\resources\Postman\Message::compose($subject, $content, null, [], null, $use_layout);
+                $Message = $MessageModel::compose($subject, $content, null, [], null, $use_layout);
 
                 $result = Html::tag('pre', Html::encode($Message->content_text));
                 break;
             case 'html':
-                $Message = \cookyii\modules\Postman\resources\Postman\Message::compose($subject, null, $content, [], null, $use_layout);
+                $Message = $MessageModel::compose($subject, null, $content, [], null, $use_layout);
 
                 $result = $Message->content_html;
                 break;
