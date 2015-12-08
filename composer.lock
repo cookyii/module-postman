@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "bower-asset/fontawesome",
-            "version": "v4.4.0",
+            "version": "v4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
+                "reference": "fddd2c240452e6c8990c4ef75e0265b455aa7968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
-                "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/fddd2c240452e6c8990c4ef75e0265b455aa7968",
+                "reference": "fddd2c240452e6c8990c4ef75e0265b455aa7968",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -170,16 +170,16 @@
         },
         {
             "name": "bower-asset/yii2-pjax",
-            "version": "v2.0.4",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/jquery-pjax.git",
-                "reference": "3f20897307cca046fca5323b318475ae9dac0ca0"
+                "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/3f20897307cca046fca5323b318475ae9dac0ca0",
-                "reference": "3f20897307cca046fca5323b318475ae9dac0ca0",
+                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/6818718408086db6bdcf33649cecb86b6b4f9b67",
+                "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67",
                 "shasum": ""
             },
             "require": {
@@ -267,12 +267,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/base.git",
-                "reference": "cd28c9ea5cd279aaa7bf7b867f37a257cc786920"
+                "reference": "2eb171f507314eca7c9294f5d450cf2f98dc78fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/base/zipball/cd28c9ea5cd279aaa7bf7b867f37a257cc786920",
-                "reference": "cd28c9ea5cd279aaa7bf7b867f37a257cc786920",
+                "url": "https://api.github.com/repos/cookyii/base/zipball/2eb171f507314eca7c9294f5d450cf2f98dc78fb",
+                "reference": "2eb171f507314eca7c9294f5d450cf2f98dc78fb",
                 "shasum": ""
             },
             "require": {
@@ -306,7 +306,7 @@
                 "cookyii",
                 "yii2"
             ],
-            "time": "2015-09-24 17:17:54"
+            "time": "2015-12-08 09:19:39"
         },
         {
             "name": "cookyii/module-media",
@@ -314,12 +314,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cookyii/module-media.git",
-                "reference": "6a2bf8e64ef16bedfd4fb3c59dc5b1d7bf2dccbf"
+                "reference": "0e5c74d628d94f70181881ef9e789fbaf6aa2abf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cookyii/module-media/zipball/6a2bf8e64ef16bedfd4fb3c59dc5b1d7bf2dccbf",
-                "reference": "6a2bf8e64ef16bedfd4fb3c59dc5b1d7bf2dccbf",
+                "url": "https://api.github.com/repos/cookyii/module-media/zipball/0e5c74d628d94f70181881ef9e789fbaf6aa2abf",
+                "reference": "0e5c74d628d94f70181881ef9e789fbaf6aa2abf",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                 "video",
                 "yii2"
             ],
-            "time": "2015-09-24 17:25:23"
+            "time": "2015-12-08 09:27:46"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -459,20 +459,20 @@
         },
         {
             "name": "rmrevin/yii2-fontawesome",
-            "version": "2.12.0",
+            "version": "2.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "51d33ec9d1d7edab2166f1d42668c1bc8d28c068"
+                "reference": "2efbfacb22be59f373d11a7e3dfa9213e2ba18a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/51d33ec9d1d7edab2166f1d42668c1bc8d28c068",
-                "reference": "51d33ec9d1d7edab2166f1d42668c1bc8d28c068",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/2efbfacb22be59f373d11a7e3dfa9213e2ba18a9",
+                "reference": "2efbfacb22be59f373d11a7e3dfa9213e2ba18a9",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/fontawesome": "4.4.*",
+                "bower-asset/fontawesome": "4.5.*",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "2.0.*"
             },
@@ -494,9 +494,9 @@
             ],
             "authors": [
                 {
-                    "name": "Roman Revin",
-                    "email": "xgismox@gmail.com",
-                    "homepage": "http://rmrevin.ru/"
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/"
                 }
             ],
             "description": "Asset Bundle for Yii2 with Font Awesome",
@@ -507,7 +507,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2015-08-15 16:50:16"
+            "time": "2015-11-26 15:24:53"
         },
         {
             "name": "yiisoft/yii2",
