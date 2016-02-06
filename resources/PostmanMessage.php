@@ -7,6 +7,7 @@
 
 namespace cookyii\modules\Postman\resources;
 
+use cookyii\modules\Postman\jobs\SendMailJob;
 use yii\helpers\Html;
 use yii\helpers\Json;
 
@@ -176,6 +177,31 @@ class PostmanMessage extends \yii\db\ActiveRecord
     public function addBcc($email, $name = null)
     {
         return $this->addAddress(static::ADDRESS_TYPE_BCC, $email, $name);
+    }
+
+    /**
+     * Put message to queue
+     * @return bool
+     */
+    public function toQueue()
+    {
+        $result = $this->validate() && $this->save();
+
+        if (!$this->isNewRecord) {
+            (new SendMailJob(['postmanMessageId' => $this->id]))
+                ->push();
+        }
+
+        return $result;
+    }
+
+    /**
+     * Save message to database
+     * @inheritdoc
+     */
+    public function save($runValidation = true, $attributeNames = null)
+    {
+        return parent::save($runValidation, $attributeNames);
     }
 
     /**
