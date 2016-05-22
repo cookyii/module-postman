@@ -2,7 +2,7 @@
 
 angular.module('BackendApp')
 
-  .controller('TemplateEditController', [
+  .controller('postman.template.EditController', [
     '$scope', '$http', '$timeout', 'QueryScope', 'TabScope', 'ToastrScope',
     function ($scope, $http, $timeout, QueryScope, TabScope, ToastrScope) {
 

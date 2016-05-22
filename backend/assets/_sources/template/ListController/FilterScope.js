@@ -2,7 +2,7 @@
 
 angular.module('BackendApp')
 
-  .service('FilterScope', [
+  .service('postman.template.list.FilterScope', [
     'QueryScope', 'FilterSearchScope',
     function (QueryScope, FilterSearchScope) {
       return function ($parentScope) {

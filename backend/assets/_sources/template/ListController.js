@@ -2,11 +2,11 @@
 
 angular.module('BackendApp')
 
-  .controller('TemplateListController', [
-    '$scope', '$timeout', 'TemplateListScope',
-    function ($scope, $timeout, TemplateListScope) {
+  .controller('postman.template.ListController', [
+    '$scope', '$timeout', 'postman.template.list.ListScope',
+    function ($scope, $timeout, ListScope) {
 
-      $scope.templates = TemplateListScope($scope);
+      $scope.templates = ListScope($scope);
 
       function _refresh() {
         $scope.templates.reload(false);

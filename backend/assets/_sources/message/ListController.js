@@ -2,11 +2,11 @@
 
 angular.module('BackendApp')
 
-  .controller('MessageListController', [
-    '$scope', '$timeout', 'MessageListScope',
-    function ($scope, $timeout, MessageListScope) {
+  .controller('postman.message.ListController', [
+    '$scope', '$timeout', 'postman.message.list.ListScope',
+    function ($scope, $timeout, ListScope) {
 
-      $scope.messages = MessageListScope($scope);
+      $scope.messages = ListScope($scope);
 
       function _refresh() {
         $scope.messages.reload(false);

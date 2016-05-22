@@ -2,8 +2,8 @@
 
 angular.module('BackendApp')
 
-  .controller('TemplateDetailController', [
-    '$scope', '$timeout', 'QueryScope', 'TemplateResource',
+  .controller('postman.template.DetailController', [
+    '$scope', '$timeout', 'QueryScope', 'postman.TemplateResource',
     function ($scope, $timeout, QueryScope, Template) {
 
       var hash = null,

@@ -2,8 +2,8 @@
 
 angular.module('BackendApp')
 
-  .factory('TemplateListScope', [
-    '$timeout', 'QueryScope', 'ToastrScope', 'SortScope', 'FilterScope', 'TemplateResource',
+  .factory('postman.template.list.ListScope', [
+    '$timeout', 'QueryScope', 'ToastrScope', 'SortScope', 'postman.template.list.FilterScope', 'postman.TemplateResource',
     function ($timeout, QueryScope, ToastrScope, SortScope, FilterScope, Template) {
       return function ($parentScope) {
 
