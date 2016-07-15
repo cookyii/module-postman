@@ -1,18 +1,18 @@
 <?php
 /**
- * PostmanTemplate.php
+ * Model.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Postman\resources;
+namespace cookyii\modules\Postman\resources\PostmanTemplate;
 
 use cookyii\helpers\ApiAttribute;
 use yii\helpers\Json;
 
 /**
- * Class PostmanTemplate
- * @package cookyii\modules\Postman\resources
+ * Class Model
+ * @package cookyii\modules\Postman\resources\PostmanTemplate
  *
  * @property integer $id
  * @property string $code
@@ -28,10 +28,12 @@ use yii\helpers\Json;
  * @property integer $updated_at
  * @property integer $deleted_at
  */
-class PostmanTemplate extends \cookyii\db\ActiveRecord
+class Model extends \cookyii\db\ActiveRecord
 {
 
     use \cookyii\db\traits\SoftDeleteTrait;
+
+    static $tableName = '{{%postman_template}}';
 
     /**
      * @inheritdoc
@@ -116,22 +118,11 @@ class PostmanTemplate extends \cookyii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\modules\Postman\resources\queries\PostmanTemplateQuery
+     * @return Query
      */
     public static function find()
     {
-        return \Yii::createObject(
-            \cookyii\modules\Postman\resources\queries\PostmanTemplateQuery::className(),
-            [get_called_class()]
-        );
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%postman_template}}';
+        return \Yii::createObject(Query::class, [get_called_class()]);
     }
 
     const NOT_USE_LAYOUT = 0;

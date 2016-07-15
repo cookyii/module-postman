@@ -1,20 +1,20 @@
 <?php
 /**
- * PostmanTemplateQuery.php
+ * Query.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Postman\resources\queries;
+namespace cookyii\modules\Postman\resources\PostmanTemplate;
 
 /**
- * Class PostmanTemplateQuery
- * @package cookyii\modules\Postman\resources\queries
+ * Class Query
+ * @package cookyii\modules\Postman\resources\PostmanTemplate
  *
- * @method \cookyii\modules\Postman\resources\PostmanTemplate|array|null one($db = null)
- * @method \cookyii\modules\Postman\resources\PostmanTemplate[]|array all($db = null)
+ * @method Model|array|null one($db = null)
+ * @method Model[]|array all($db = null)
  */
-class PostmanTemplateQuery extends \yii\db\ActiveQuery
+class Query extends \yii\db\ActiveQuery
 {
 
     use \cookyii\db\traits\query\DeletedQueryTrait;

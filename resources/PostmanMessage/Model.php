@@ -1,21 +1,22 @@
 <?php
 /**
- * PostmanMessage.php
+ * Model.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Postman\resources;
+namespace cookyii\modules\Postman\resources\PostmanMessage;
 
 use cookyii\helpers\ApiAttribute;
 use cookyii\helpers\Premailer;
 use cookyii\modules\Postman\jobs\SendMailJob;
+use cookyii\modules\Postman\resources\PostmanTemplate\Model as PostmanTemplateModel;
 use yii\helpers\Html;
 use yii\helpers\Json;
 
 /**
- * Class PostmanMessage
- * @package cookyii\modules\Postman\resources
+ * Class Model
+ * @package cookyii\modules\Postman\resources\PostmanMessage
  *
  * @property integer $id
  * @property string $subject
@@ -31,13 +32,15 @@ use yii\helpers\Json;
  * @property integer $sent_at
  * @property integer $deleted_at
  */
-class PostmanMessage extends \cookyii\db\ActiveRecord
+class Model extends \cookyii\db\ActiveRecord
 {
 
     use \cookyii\db\traits\SoftDeleteTrait,
         \cookyii\traits\PopulateErrorsTrait;
 
     const LAYOUT_CODE = '.layout';
+
+    static $tableName = '{{%postman_message}}';
 
     /** @var string ID of postman component */
     public static $postman = 'postman';
@@ -375,13 +378,13 @@ class PostmanMessage extends \cookyii\db\ActiveRecord
      * @param string $template_code
      * @param array $placeholders
      * @param string|null $subject
-     * @return \cookyii\modules\Postman\resources\PostmanMessage
+     * @return static
      * @throws \yii\web\ServerErrorHttpException
      */
     public static function create($template_code, $placeholders = [], $subject = null)
     {
-        /** @var \cookyii\modules\Postman\resources\PostmanTemplate $TemplateModel */
-        $TemplateModel = \Yii::createObject(\cookyii\modules\Postman\resources\PostmanTemplate::className());
+        /** @var PostmanTemplateModel $TemplateModel */
+        $TemplateModel = \Yii::createObject(PostmanTemplateModel::className());
 
         $Template = $TemplateModel::find()
             ->byCode($template_code)
@@ -524,8 +527,8 @@ class PostmanMessage extends \cookyii\db\ActiveRecord
                 throw new \yii\base\InvalidConfigException;
             }
         } elseif ($layout === 'database') {
-            /** @var \cookyii\modules\Postman\resources\PostmanTemplate $TemplateModel */
-            $TemplateModel = \Yii::createObject(\cookyii\modules\Postman\resources\PostmanTemplate::className());
+            /** @var PostmanTemplateModel $TemplateModel */
+            $TemplateModel = \Yii::createObject(PostmanTemplateModel::className());
 
             $LayoutTemplate = $TemplateModel::find()
                 ->byCode(static::LAYOUT_CODE)
@@ -556,22 +559,11 @@ class PostmanMessage extends \cookyii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\modules\Postman\resources\queries\PostmanMessageQuery
+     * @return Query
      */
     public static function find()
     {
-        return \Yii::createObject(
-            \cookyii\modules\Postman\resources\queries\PostmanMessageQuery::className(),
-            [get_called_class()]
-        );
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%postman_message}}';
+        return \Yii::createObject(Query::class, [get_called_class()]);
     }
 
     const ADDRESS_TYPE_REPLY_TO = 1;

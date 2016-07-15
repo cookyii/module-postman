@@ -1,22 +1,24 @@
 <?php
 /**
- * PostmanTemplateAttach.php
+ * Model.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Postman\resources;
+namespace cookyii\modules\Postman\resources\PostmanTemplateAttach;
 
 /**
- * Class Attach
- * @package cookyii\modules\Postman\resources
+ * Class Model
+ * @package cookyii\modules\Postman\resources\PostmanTemplateAttach
  *
  * @property integer $letter_template_id
  * @property integer $media_id
  * @property integer $embed
  */
-class PostmanTemplateAttach extends \cookyii\db\ActiveRecord
+class Model extends \cookyii\db\ActiveRecord
 {
+
+    static $tableName = '{{%postman_template_attach}}';
 
     /**
      * @inheritdoc
@@ -37,23 +39,11 @@ class PostmanTemplateAttach extends \cookyii\db\ActiveRecord
     }
 
     /**
-     * @return \cookyii\modules\Postman\resources\queries\PostmanTemplateAttachQuery
+     * @return Query
      */
     public static function find()
     {
-        return \Yii::createObject(
-            \cookyii\modules\Postman\resources\queries\PostmanTemplateAttachQuery::className(), [
-                get_called_class(),
-            ]
-        );
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public static function tableName()
-    {
-        return '{{%postman_template_attach}}';
+        return \Yii::createObject(Query::class, [get_called_class()]);
     }
 
     const EMBED_NO = 0;

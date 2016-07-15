@@ -1,20 +1,20 @@
 <?php
 /**
- * PostmanMessageQuery.php
+ * Query.php
  * @author Revin Roman
  * @link https://rmrevin.com
  */
 
-namespace cookyii\modules\Postman\resources\queries;
+namespace cookyii\modules\Postman\resources\PostmanMessage;
 
 /**
- * Class PostmanMessageQuery
- * @package cookyii\modules\Postman\resources\queries
+ * Class Query
+ * @package cookyii\modules\Postman\resources\PostmanMessage
  *
- * @method \cookyii\modules\Postman\resources\PostmanMessage|array|null one($db = null)
- * @method \cookyii\modules\Postman\resources\PostmanMessage[]|array all($db = null)
+ * @method Model|array|null one($db = null)
+ * @method Model[]|array all($db = null)
  */
-class PostmanMessageQuery extends \yii\db\ActiveQuery
+class Query extends \yii\db\ActiveQuery
 {
 
     use \cookyii\db\traits\query\DeletedQueryTrait;
